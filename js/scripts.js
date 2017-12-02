@@ -1,9 +1,7 @@
-$(document).ready(function() {
-  $("form#quiz").submit(function(event) {
+$(document).ready(function(){
+  $("form#quiz").submit(function(event){
     var niceness = $("select#niceness").val();
     var gender = $("select#gender").val();
-    console.log("niceness" + niceness);
-    console.log("gender" + gender);
       if (gender === 'male' && niceness === 'nice') {
         $('#jim').show();
         $("#dwight, #pam, #angela").hide();
@@ -17,7 +15,6 @@ $(document).ready(function() {
         $('#pam').show();
         $("#jim, #dwight, #angela").hide();
       }
-    }
     event.preventDefault();
   });
 });
